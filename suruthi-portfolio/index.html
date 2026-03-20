@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suruthi V — Developer Portfolio</title>
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .certifications-list { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .cert-item { display: flex; align-items: center; gap: 16px; background: var(--border-gradient-onyx); border: 1px solid var(--jet); border-radius: 14px; padding: 16px 20px; transition: 0.3s; }
+    .cert-item:hover { background: var(--bg-gradient-jet); }
+    .cert-icon-box { min-width: 44px; height: 44px; background: var(--bg-gradient-onyx); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--orange-yellow-crayola); }
+    .cert-info h4 { font-size: var(--fs-6); color: var(--white-2); margin-bottom: 4px; }
+    .cert-info span { font-size: 12px; color: var(--light-gray-70); }
+    .cert-info .cert-issuer { color: var(--orange-yellow-crayola); font-size: 12px; font-weight: 500; }
+    .achievements-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 580px) { .achievements-list { grid-template-columns: 1fr; } }
+    .achievement-card { background: var(--bg-gradient-jet); border: 1px solid var(--jet); border-radius: 14px; padding: 20px; text-align: center; transition: 0.3s; }
+    .achievement-card:hover { border-color: var(--orange-yellow-crayola); }
+    .achievement-card ion-icon { font-size: 32px; color: var(--orange-yellow-crayola); margin-bottom: 10px; display: block; }
+    .achievement-card h4 { font-size: var(--fs-6); color: var(--white-2); margin-bottom: 6px; }
+    .achievement-card p { font-size: 13px; color: var(--light-gray-70); }
+    .achievement-card .rating { font-size: 18px; font-weight: 600; color: var(--orange-yellow-crayola); margin: 6px 0; }
+    .achievement-card a { color: var(--orange-yellow-crayola); font-size: 12px; text-decoration: underline; }
+    .project-desc-box { padding: 14px 16px; background: var(--bg-gradient-onyx); border-radius: 0 0 14px 14px; }
+    .project-desc-box p { font-size: 12px; color: var(--light-gray-70); margin-top: 6px; line-height: 1.6; }
+    .project-tech { color: var(--orange-yellow-crayola) !important; font-weight: 500; }
+    .project-list .project-item a { display: flex; flex-direction: column; }
+    .project-list .project-item figure { margin-bottom: 0; border-radius: 14px 14px 0 0; }
+    .project-list .project-item .project-title { margin-top: 0; padding: 10px 16px 2px; }
+    .project-list .project-item .project-category { padding: 0 16px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag { background: var(--bg-gradient-jet); border: 1px solid var(--jet); border-radius: 6px; padding: 5px 12px; font-size: 12px; color: var(--white-2); transition: 0.25s; }
+    .skill-tag:hover { border-color: var(--orange-yellow-crayola); color: var(--orange-yellow-crayola); }
+    .skill-group-title { font-size: var(--fs-7); color: var(--orange-yellow-crayola); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; margin-top: 18px; }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-image.jpeg" alt="Suruthi V" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Suruthi V">Suruthi V</h1>
+          <p class="title">Full-Stack & Android Developer</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:suruthi.v2024cce@sece.ac.in" class="contact-link">suruthi.v2024cce@sece.ac.in</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+919345896195" class="contact-link">+91 9345896195</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">College</p>
+              <address>Sri Eshwar College of Engineering</address>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Tamil Nadu, India</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/suruthivelusamy29" class="social-link"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/suruthi-v-7b8a09321" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li class="social-item">
+            <a href="https://leetcode.com/u/Suruthi_V29/" class="social-link"><ion-icon name="code-slash-outline"></ion-icon></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <div class="main-content">
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Certifications</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+        </ul>
+      </nav>
+
+
+      <!-- ABOUT -->
+      <article class="about active" data-page="about">
+        <header><h2 class="h2 article-title">About me</h2></header>
+
+        <section class="about-text">
+          <p>
+            I'm a B.E. Computer and Communication Engineering student at Sri Eshwar College of Engineering (Class of 2028),
+            passionate about building real-world software solutions. I love turning ideas into functional applications —
+            from Android apps and full-stack web platforms to security tools.
+          </p>
+          <p>
+            With hands-on experience in React, Node.js, Kotlin, MongoDB, and Cyber Security, I thrive at the intersection
+            of clean code and impactful products. I'm an active competitive programmer with 100+ LeetCode problems solved
+            and 140+ problems on CodeChef.
+          </p>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="web dev" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Full-Stack Web Development</h4>
+                <p class="service-item-text">Building end-to-end web applications with React.js, Node.js, Express, and MongoDB.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-app.svg" alt="mobile" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Android Development</h4>
+                <p class="service-item-text">Crafting native Android applications in Kotlin with clean architecture and MongoDB backends.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="security" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cyber Security</h4>
+                <p class="service-item-text">Practising ethical hacking, vulnerability assessment using Nmap & Wireshark, and OWASP security standards.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-photo.svg" alt="cp" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Competitive Programming</h4>
+                <p class="service-item-text">Solving algorithmic challenges daily on LeetCode (Rating 1454) and CodeChef — sharpening DSA skills.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Internship Highlight</h3>
+          <ul class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Cyber Security Analyst — InternzLearn</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>3-month live internship covering ethical hacking, CIA Triad, vulnerability assessment (Nmap, Wireshark), OWASP Top 10 (SQL Injection, XSS, CSRF), CTF challenges, penetration testing, risk analysis, and incident reporting.</p>
+                  <p style="margin-top:8px; color: var(--orange-yellow-crayola); font-size: 13px;">2025 · Duration: 3 Months</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn><ion-icon name="close-outline"></ion-icon></button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box"><img src="./assets/images/avatar-1.png" alt="InternzLearn" width="80" data-modal-img></figure>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>Cyber Security Analyst — InternzLearn</h4>
+              <time datetime="2025-01-01">2025</time>
+              <div data-modal-text>
+                <p>3-month live internship with hands-on exposure to ethical hacking, vulnerability assessment using Nmap and Wireshark, OWASP Top 10 vulnerabilities, CTF-based challenges, risk analysis, and penetration testing.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </article>
+
+
+      <!-- RESUME -->
+      <article class="resume" data-page="resume">
+        <header><h2 class="h2 article-title">Resume</h2></header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Sri Eshwar College of Engineering</h4>
+              <span>2024 — 2028</span>
+              <p class="timeline-text">B.E. in Computer and Communication Engineering (CCE). CGPA: 8.16 (up to 2nd Semester).</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Aathmalayaa Senior Secondary School — HSC</h4>
+              <span>2023 — 2024</span>
+              <p class="timeline-text">Higher Secondary Certificate (Class XII). Scored 78%.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Aathmalayaa Senior Secondary School — SSLC</h4>
+              <span>2021 — 2022</span>
+              <p class="timeline-text">Secondary School Leaving Certificate (Class X). Scored 76%.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+            <h3 class="h3">Internship</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Cyber Security Analyst — InternzLearn</h4>
+              <span>2025 · 3 Months</span>
+              <p class="timeline-text">Live project internship covering ethical hacking, vulnerability assessment (Nmap, Wireshark), OWASP Top 10 vulnerabilities, CTF problem solving, risk analysis, network monitoring, and penetration testing.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My Skills</h3>
+          <div class="content-card" style="padding: 20px;">
+            <p class="skill-group-title">Languages</p>
+            <div class="skill-tags">
+              <span class="skill-tag">C++</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span><span class="skill-tag">Java</span><span class="skill-tag">Kotlin</span><span class="skill-tag">Python</span>
+            </div>
+            <p class="skill-group-title">Frameworks & Libraries</p>
+            <div class="skill-tags">
+              <span class="skill-tag">React.js</span><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">Flask</span>
+            </div>
+            <p class="skill-group-title">Databases</p>
+            <div class="skill-tags">
+              <span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span><span class="skill-tag">Firebase</span>
+            </div>
+            <p class="skill-group-title">Core CS</p>
+            <div class="skill-tags">
+              <span class="skill-tag">OOP</span><span class="skill-tag">DBMS</span><span class="skill-tag">DSA</span><span class="skill-tag">Cyber Security</span>
+            </div>
+            <p class="skill-group-title">Mobile & Tools</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Android (Kotlin)</span><span class="skill-tag">Android Studio</span>
+              <span class="skill-tag">Figma</span><span class="skill-tag">VSCode</span><span class="skill-tag">GitHub</span><span class="skill-tag">Canva</span>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+
+      <!-- PROJECTS (replaces Portfolio) -->
+      <article class="portfolio" data-page="projects">
+        <header><h2 class="h2 article-title">Projects</h2></header>
+
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>Web</button></li>
+            <li class="filter-item"><button data-filter-btn>Android</button></li>
+            <li class="filter-item"><button data-filter-btn>Security</button></li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Web</button></li>
+              <li class="select-item"><button data-select-item>Android</button></li>
+              <li class="select-item"><button data-select-item>Security</button></li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="security">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/project-1.jpg" alt="Bank Fraud Protector" loading="lazy">
+                </figure>
+                <h3 class="project-title">Bank Fraud Protector</h3>
+                <p class="project-category">Security</p>
+                <div class="project-desc-box">
+                  <p>Real-time SMS fraud detection combating phishing, smishing, and fake OTP scams using ML models, malicious URL detection with reputation analysis, and OTP fraud prevention logic.</p>
+                  <p class="project-tech">React.js · Node.js · MongoDB · ML</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="android">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/project-2.png" alt="TaskFlow" loading="lazy">
+                </figure>
+                <h3 class="project-title">TaskFlow — Android To-Do App</h3>
+                <p class="project-category">Android</p>
+                <div class="project-desc-box">
+                  <p>Full-stack Android to-do app with CRUD operations, user authentication, task categorization, and MongoDB cloud sync. UI designed with Figma, clean architecture focus.</p>
+                  <p class="project-tech">Kotlin · Android Studio · MongoDB · Figma</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/project-3.jpg" alt="Room Master" loading="lazy">
+                </figure>
+                <h3 class="project-title">Room Master</h3>
+                <p class="project-category">Web</p>
+                <div class="project-desc-box">
+                  <p>Console-based hotel booking & management system with secure staff login, room availability management, guest info handling, and modular Flask-based architecture for scalability.</p>
+                  <p class="project-tech">Python · Flask · MongoDB</p>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </section>
+      </article>
+
+
+      <!-- CERTIFICATIONS (replaces Blog) -->
+      <article class="blog" data-page="certifications">
+        <header><h2 class="h2 article-title">Certifications</h2></header>
+
+        <section style="margin-bottom: 40px;">
+          <div class="title-wrapper" style="margin-bottom: 20px;">
+            <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+            <h3 class="h3">Certifications</h3>
+          </div>
+          <ul class="certifications-list">
+            <li class="cert-item">
+              <div class="cert-icon-box"><ion-icon name="logo-python"></ion-icon></div>
+              <div class="cert-info">
+                <h4>Python Fundamentals</h4>
+                <span class="cert-issuer">Infosys Springboard</span><span> · 2025</span>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon-box"><ion-icon name="globe-outline"></ion-icon></div>
+              <div class="cert-info">
+                <h4>Introduction to HTML, CSS &amp; JavaScript</h4>
+                <span class="cert-issuer">Sololearn</span><span> · 2025</span>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon-box"><ion-icon name="code-slash-outline"></ion-icon></div>
+              <div class="cert-info">
+                <h4>C++ Programming</h4>
+                <span class="cert-issuer">IIT Bombay</span><span> · 2024</span>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon-box"><ion-icon name="terminal-outline"></ion-icon></div>
+              <div class="cert-info">
+                <h4>C Programming</h4>
+                <span class="cert-issuer">IIT Bombay</span><span> · 2024</span>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon-box"><ion-icon name="color-palette-outline"></ion-icon></div>
+              <div class="cert-info">
+                <h4>UI/UX Design</h4>
+                <span class="cert-issuer">Code Gallata</span><span> · 2024</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="title-wrapper" style="margin-bottom: 20px;">
+            <div class="icon-box"><ion-icon name="trophy-outline"></ion-icon></div>
+            <h3 class="h3">Coding Achievements</h3>
+          </div>
+          <div class="achievements-list">
+            <div class="achievement-card">
+              <ion-icon name="flash-outline"></ion-icon>
+              <h4>LeetCode</h4>
+              <div class="rating">Rating 1454</div>
+              <p>100+ Problems Solved</p>
+              <a href="https://leetcode.com/u/Suruthi_V29/" target="_blank">View Profile &rarr;</a>
+            </div>
+            <div class="achievement-card">
+              <ion-icon name="bar-chart-outline"></ion-icon>
+              <h4>CodeChef</h4>
+              <div class="rating">140+ Problems</div>
+              <p>Active Competitive Programmer</p>
+              <a href="https://www.codechef.com/users/suruthi29/" target="_blank">View Profile &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+ 
+      <!-- CONTACT -->
+      <article class="contact" data-page="contact">
+        <header><h2 class="h2 article-title">Contact</h2></header>
+ 
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125350.60248408624!2d76.9118803!3d11.0168445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1647608789441!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+ 
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+ 
+          <!-- Status message box -->
+          <div id="form-status" style="
+            display: none;
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            font-weight: 500;
+          "></div>
+ 
+          <form action="#" class="form" data-form id="contact-form">
+            <div class="input-wrapper">
+              <input type="text" name="fullname" id="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" id="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn id="submit-btn">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+ 
+      </article>
+ 
+    </div>
+  </main>
+ 
+  <script src="./assets/js/script.js"></script>
+ 
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+ 
+  <script>
+    // ─────────────────────────────────────────────
+    // EMAILJS CONFIGURATION
+    // Step 1: Sign up free at https://www.emailjs.com
+    // Step 2: Create an Email Service (Gmail recommended) → copy Service ID below
+    // Step 3: Create an Email Template with variables:
+    //         {{from_name}}, {{from_email}}, {{message}}  → copy Template ID below
+    // Step 4: Go to Account → API Keys → copy your Public Key below
+    // ─────────────────────────────────────────────
+    const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";   // 🔑 replace this
+    const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // 📧 replace this
+    const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // 📄 replace this
+ 
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+ 
+    const contactForm  = document.getElementById("contact-form");
+    const submitBtn    = document.getElementById("submit-btn");
+    const statusBox    = document.getElementById("form-status");
+ 
+    function showStatus(message, success) {
+      statusBox.textContent = message;
+      statusBox.style.display = "block";
+      statusBox.style.background = success
+        ? "rgba(34,197,94,0.15)"
+        : "rgba(239,68,68,0.15)";
+      statusBox.style.border = success
+        ? "1px solid rgba(34,197,94,0.4)"
+        : "1px solid rgba(239,68,68,0.4)";
+      statusBox.style.color = success ? "#4ade80" : "#f87171";
+    }
+ 
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+ 
+      // Show sending state
+      submitBtn.disabled = true;
+      submitBtn.querySelector("span").textContent = "Sending…";
+ 
+      const templateParams = {
+        from_name:  document.getElementById("fullname").value.trim(),
+        from_email: document.getElementById("email").value.trim(),
+        message:    document.getElementById("message").value.trim(),
+        to_email:   "suruthi.v2024cce@sece.ac.in"
+      };
+ 
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function () {
+          showStatus("✅ Message sent successfully! Suruthi will get back to you soon.", true);
+          contactForm.reset();
+          submitBtn.querySelector("span").textContent = "Send Message";
+          // Button stays disabled until fields are filled again (handled by script.js)
+        })
+        .catch(function (error) {
+          console.error("EmailJS error:", error);
+          showStatus("❌ Failed to send message. Please try again or email directly at suruthi.v2024cce@sece.ac.in", false);
+          submitBtn.disabled = false;
+          submitBtn.querySelector("span").textContent = "Send Message";
+        });
+    });
+  </script>
+ 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+ 
